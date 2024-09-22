@@ -25,13 +25,13 @@
             overflow: hidden; /* Prevent scrolling */
         }
         #gameContainer {
-            width: 500%;
-            height: 500%;
+            width: 100%;
+            height: 100%;
             position: relative; /* Ensure child elements position correctly */
         }
         #gameArea {
-            width: 100%;
-            height: 100%;
+            width: 700%;
+            height: 700%;
             position: absolute;
             top: 0;
             left: 0;
@@ -42,22 +42,6 @@
             height: 100%;
         }
     </style>
-    <script>
-    window.addEventListener('load', resizeGameArea);
-    window.addEventListener('resize', resizeGameArea);
-
-    function resizeGameArea() {
-        const canvas = document.getElementById('c');
-        const gameArea = document.getElementById('gameArea');
-
-        const canvasWidth = canvas.offsetWidth;
-        const canvasHeight = canvas.offsetHeight;
-
-        gameArea.style.width = `${canvasWidth}px`;
-        gameArea.style.height = `${canvasHeight}px`;
-    }
-    resizeGameArea();
-</script>
 </head>
 <body class="ctrCursor">
     <div id="lang">
