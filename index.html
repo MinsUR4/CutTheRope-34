@@ -42,6 +42,22 @@
             height: 100%;
         }
     </style>
+    <script>
+    window.addEventListener('load', resizeGameArea);
+    window.addEventListener('resize', resizeGameArea);
+
+    function resizeGameArea() {
+        const canvas = document.getElementById('c');
+        const gameArea = document.getElementById('gameArea');
+
+        const canvasWidth = canvas.offsetWidth;
+        const canvasHeight = canvas.offsetHeight;
+
+        gameArea.style.width = `${canvasWidth}px`;
+        gameArea.style.height = `${canvasHeight}px`;
+    }
+    resizeGameArea();
+</script>
 </head>
 <body class="ctrCursor">
     <div id="lang">
